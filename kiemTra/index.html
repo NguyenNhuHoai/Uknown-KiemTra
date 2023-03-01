@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Anh Hoài 77</h1>
-    <form action="#" method="POST">
+    <form>
         <label for="username" id="username">Tên đăng nhập: </label>
-        <input type="text" id="txtUsername" value="">
-        <label for="MatKhau" id ="password">Mật khẩu:</label>
-        <input type="password" id="txtPassword" value="">
-        <input type="submit" id="btnLogin" value="Đăng Nhập">
+        <input type="text" id="txtUsername">
+        <label for="MatKhau" id="password">Mật khẩu:</label>
+        <input type="password" id="txtPassword">
+        <input type="submit" id="btnLogin" value="Đăng Nhập" onclick="handleClick()">
     </form>
-</body>
+
+    <script>
+        function login(){
+            let txtUsername = document.getElementById("txtUsername").value;
+            let txtPassword = document.getElementById("txtPassword").value;
+               var result = (txtUsername === "admin" && txtPassword === "admin") ? alert("Đăng nhập thành công") : alert("Đăng nhập thất bại");
+                return result;
+        }
+    </script>
 </html>
